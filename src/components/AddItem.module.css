@@ -1,0 +1,31 @@
+.todo {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 12px 45px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #2abca7;
+}
+
+.todoButton {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  background-color: #2abca7;
+  padding: 12px 45px;
+  border-radius: 0px 10px 10px 0;
+  border: 1px solid #2abca7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: inline-block;
+  cursor: pointer;
+  width: 30%;
+  color: #fff;
+  &:hover,
+  &:hover {
+    background: #19a08c;
+  }
+}

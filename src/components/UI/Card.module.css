@@ -1,0 +1,9 @@
+.card {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  border: 30px solid #2abca7;
+  border-radius: 10px;
+  height: 550px;
+  overflow: scroll;
+}
