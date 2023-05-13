@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./ItemList.module.css";
 
 const ItemList = (props) => {
   return (
-    <ul className={classes.todoList}>
+    <div className={classes.todoList}>
       {props.items.map((item) => (
-        <li key={item.id} className={classes.listItem}>
-          {item.text}
-        </li>
+        <div
+          key={item.id}
+          className={classes.todoItem}
+          item={item}
+          onClick={props.onDeleteItem}
+        >
+          <div className={classes.listItem}>{item.text}</div>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 

@@ -17,12 +17,17 @@ function App() {
     });
   };
 
+  const deleteItemHandler = (key) => {
+    const newItemList = [...itemList];
+    newItemList.splice(key, 1);
+    setItemList(newItemList);
+  };
+
   return (
     <div>
       <Card>
-        <h1>Todo List</h1>
         <AddItem onAddItem={addItemHandler} />
-        <ItemList items={itemList} />
+        <ItemList items={itemList} onDeleteItem={deleteItemHandler} />
       </Card>
     </div>
   );

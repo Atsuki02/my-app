@@ -18,9 +18,11 @@ const AddItem = (props) => {
 
   return (
     <form onSubmit={addItemHandler} className={classes.todo}>
+      <h1 className={classes.todoTitle}>Todo List</h1>
       <input
         type="text"
         name="text"
+        placeholder="Add New Task"
         value={inputText}
         className={classes.todoInput}
         onChange={inputHandler}
