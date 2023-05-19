@@ -17,10 +17,16 @@ function App() {
     });
   };
 
-  const deleteItemHandler = (key) => {
-    const newItemList = [...itemList];
-    newItemList.splice(key, 1);
-    setItemList(newItemList);
+  // const deleteItemHandler = (key) => {
+  //   const newItemList = [...itemList];
+  //   newItemList.splice(key, 1);
+  //   setItemList(newItemList);
+  // };
+  const deleteItemHandler = (itemKey) => {
+    setItemList((prevItem) => {
+      const updatedItem = prevItem.filter((item) => item.key !== itemKey);
+      return updatedItem;
+    });
   };
 
   return (
